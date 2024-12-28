@@ -17,7 +17,7 @@ public class WebConfig {
     @Bean
     public SecurityFilterChain securityFilterChain (HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeHttpRequests(req ->
-                req.requestMatchers("/api", "/contact", "/updates").permitAll()
+                req.requestMatchers("/contact", "/updates").permitAll()
                         .anyRequest().authenticated()
         ).formLogin(withDefaults())
                 .httpBasic(withDefaults());

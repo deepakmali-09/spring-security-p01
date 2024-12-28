@@ -19,4 +19,9 @@ public class MyController {
     public String contact() {
         return "Contact are publicly accessible";
     }
+
+    @GetMapping("/secure")
+    public String secure() {
+        return "This is secure api";
+    }
 }
